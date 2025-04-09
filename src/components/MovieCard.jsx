@@ -1,16 +1,11 @@
 
-import { Movie, getImageUrl } from "@/services/api";
+import { getImageUrl } from "@/services/api";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 
-interface MovieCardProps {
-  movie: Movie;
-  genres?: { [id: number]: string };
-}
-
-export function MovieCard({ movie, genres }: MovieCardProps) {
+export function MovieCard({ movie, genres }) {
   return (
     <Card className="movie-card overflow-hidden h-full flex flex-col animate-fade-in">
       <Link to={`/movie/${movie.id}`} className="relative group block flex-1">

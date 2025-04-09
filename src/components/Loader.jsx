@@ -1,12 +1,7 @@
 
 import { cn } from "@/lib/utils";
 
-interface LoaderProps {
-  className?: string;
-  size?: "sm" | "md" | "lg";
-}
-
-export function Loader({ className, size = "md" }: LoaderProps) {
+export function Loader({ className, size = "md" }) {
   const sizeClasses = {
     sm: "h-4 w-4 border-2",
     md: "h-8 w-8 border-3",
